@@ -1,6 +1,6 @@
 <h1>Task</h1>
 <h1><%= @task.title %></h1>
-<h1><%= @task.details%></h1>
+<h6><%= @task.details%></h6>
 <h1><%= @task.completed%></h1>
 <%=link_to "Back to List", tasks_path%></h6>
-<%=link_to "Edit task", task_edit_path%></h6>
+<%=link_to "Edit task", edit_task_path%></h6>

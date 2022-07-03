@@ -1,10 +1,10 @@
 <h1>My Tasks</h1>
 <div class = 'container'>
   <% @tasks.each do |task| %>
-    <h6><%=link_to task.title, task_path(task)%><%=link_to "🗑",
+    <h6><%= "✅" if task.completed%><%=link_to task.title, task_path(task)%><%=link_to "🗑",
      task_path(task),
      method: :delete,
     data: {confirm: "Are you sure?"}%></h6>
   <% end %>
-   <h6><%=link_to 'Create a task', task_new_path%></h6>
+   <h6><%=link_to 'Create a task', new_task_path%></h6>
 </div>
